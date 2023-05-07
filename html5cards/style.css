@@ -107,7 +107,7 @@ body{
   background-color: transparent;
   height: 7vmin;
   width: 7vmin;
-  curso: pointer;
+  cursor: pointer;
 }
 
 #love-button {
