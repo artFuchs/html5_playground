@@ -1,0 +1,169 @@
+/* Definições Básicas */
+
+:root{
+  --background-color: #b7b7f7;
+  --card-background: #d7d7f7;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+h4{
+  margin-top: 0.1em;
+  margin-bottom: 1em;
+}
+
+/* Definições das áreas */
+
+#setores{
+  /* background-color: #77A; */
+  grid-area: setores;
+}
+
+#camera{
+  /* background-color: #A77; */
+  grid-area: camera;
+  /* min-height: calc(60vh - 32px); */
+}
+
+#imagem{
+  /* background-color: #7A7; */
+  grid-area: imagem;
+}
+
+#tabela{
+  /* background-color: #A7A; */
+  grid-area: tabela;
+  /* max-height: calc(40vh - 32px);display: grid; */
+}
+
+.card{
+  background-color: var(--card-background);
+  box-shadow: 2px 2px 4px black;
+  border-radius: 1em;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.grid{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 15em 1fr 1fr;
+  grid-template-rows: 1.5fr 0.5fr;
+  grid-template-areas:
+    'setores camera camera'
+    'setores imagem tabela'
+}
+
+
+
+/* Controle do tamanho de imagem */
+
+.imagem{
+  /* background-color: #77A; */
+  position: relative;
+  width: 100%;
+  height: calc(100% - 20px - 1.1em);
+}
+
+  .imagem img {
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      left:50%;
+      top:50%;
+      transform: translateX(-50%)translateY(-50%);
+  }
+
+
+
+/* Lista de seleção dos setores */
+
+.list_setores {
+  /* background-color: orangered; */
+  height: calc(100% - 20px - 1.1em);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  text-align: center;
+}
+
+  .list_setores input {
+    display: none;
+  }
+
+  .list_setores label {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: solid black 1px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .list_setores label:hover {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+  }
+
+  .list_setores input:checked + label{
+    background-color: black;
+    color: white;
+  }
+
+
+.tabela {
+  /* max-height: calc(100% - 20px - 1.1em); */
+  max-height: calc(30vh);
+  overflow-y: auto;
+}
+
+  .tabela > table {
+    width: 100%;
+  }
+
+  .tabela > table > thead {
+    background-color: black;
+    font-weight: bold;
+    color: white;
+  }
+
+  .tabela > table > tbody > .odd {
+    background-color: #b7b7f7;
+    border:none;
+  }
+
+  .tabela > table > tbody > .even {
+    background-color: #5454b7;
+    color: white;
+    border:none
+  }
+
+
+
+@media screen and (max-width: 550px) {
+  .grid{
+    grid-template-columns: 1.5fr;
+    grid-template-rows: repeat(1fr);
+    grid-template-areas:
+      'setores'
+      'camera'
+      'tabela'
+      'imagem' 
+  }
+
+  .imagem{
+    min-height: 30vh;
+  }
+
+  .tabela{
+    max-height: 100%;
+  }
+}
