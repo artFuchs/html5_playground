@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Focus Test</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="./script.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <button onclick="createWindow()">Criar Nova Janela</button>
+        <button onclick="focusWindow()">Focar Janela</button>
+        <button onclick="focusWindow(5)">Focar Janela em 5 segundos</button>
+        <button onclick="focusThisWindow(5)">Focar esta janela em 5 segundos</button>
+        <button onclick="notifyMe()">Criar Notificação</button>
+        <button onclick="notifyMe(5)">Criar Notificação daqui a 5 segundos</button>
+
+    </body>
+</html>
