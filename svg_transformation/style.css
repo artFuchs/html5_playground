@@ -1,0 +1,10 @@
+#svg-container svg {
+  width: 100%;
+}
+
+.icone:hover {
+  transform: scale(1.2);
+  transform-origin: center;  
+  transform-box: fill-box;
+  transition: 300ms ease;
+}

@@ -1,0 +1,19 @@
+.form {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form_field {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.adjacent_fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 4px;
+}

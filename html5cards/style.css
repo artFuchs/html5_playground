@@ -50,22 +50,22 @@ body{
 
 .card:nth-child(1) {
   transform: translate(-10%) rotate(-1deg);
-  background-image: url(https://d30womf5coomej.cloudfront.net/c/73/6dac1c1c-53ee-4a71-a975-c0a9d30bb234.jpg);
+  background-image: url(./images/card1.jpg);
 }
 
 .card:nth-child(2) {
   transform: rotate(3deg);
-  background-image:url(https://d30womf5coomej.cloudfront.net/c/85/62f36452-16d6-4793-b4c4-872d0f7faecc.jpg);
+  background-image:url(./images/card2.jpg);
 }
 
 .card:nth-child(3) {
   transform: translate(10%,5%)rotate(3deg);
-  background-image:url(https://d30womf5coomej.cloudfront.net/c/06/df212210-d65a-4229-839d-bb8dc5cd8402.jpg);
+  background-image:url(./images/card3.jpg);
 }
 
 .card:nth-child(4) {
   transform: translate(12%,2%)rotate(10deg);
-  background-image:url(https://d30womf5coomej.cloudfront.net/c/60/7747c6f3-ba32-40f1-b889-fedcd5e35557.jpg);
+  background-image:url(./images/card4.jpg);
 }
 
 .card-group:hover > .card:nth-child(1) {
@@ -107,7 +107,7 @@ body{
   background-color: transparent;
   height: 7vmin;
   width: 7vmin;
-  curso: pointer;
+  cursor: pointer;
 }
 
 #love-button {
